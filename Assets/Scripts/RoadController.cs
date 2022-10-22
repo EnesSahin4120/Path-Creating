@@ -59,7 +59,7 @@ public class RoadController : MonoBehaviour
             {
                 vertices.Add(op.WorldPosition(roadShape.vertices[j].vertexPos));
                 normals.Add(op.WorldAxis(roadShape.vertices[j].vertexNormal));
-                uvs.Add(new Vector2(0, t));
+                uvs.Add(new Vector2((float)j / (float)roadShape.vertices.Length, (float)i % 2 / 2f));
             }
         }
 
